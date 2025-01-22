@@ -3,7 +3,7 @@ name: firecrawl
 x-common-service: &common-service
   build: apps/api
   networks:
-    - coolify
+    - ss4og0w0w8k0k080owsws0wc
   extra_hosts:
     - "host.docker.internal:host-gateway"
 
@@ -17,7 +17,7 @@ services:
       - PROXY_PASSWORD=${PROXY_PASSWORD}
       - BLOCK_MEDIA=${BLOCK_MEDIA}
     networks:
-      - coolify
+      - ss4og0w0w8k0k080owsws0wc
 
   api:
     <<: *common-service
@@ -87,9 +87,9 @@ services:
   redis:
     image: redis:alpine
     networks:
-      - coolify
+      - ss4og0w0w8k0k080owsws0wc
     command: redis-server --bind 0.0.0.0
 
 networks:
-  coolify:
+  ss4og0w0w8k0k080owsws0wc:
     external: true
